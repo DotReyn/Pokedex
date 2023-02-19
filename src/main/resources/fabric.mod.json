@@ -14,11 +14,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.examplemod.ExampleMod"
+      "dot.reyn.pokedex.Pokedex"
     ]
   },
   "mixins": [
-    "examplemod.mixins.json"
+
   ],
   "depends": {
     "fabricloader": ">=0.14.10",

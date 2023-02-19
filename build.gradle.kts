@@ -15,6 +15,7 @@ repositories {
             includeGroup("curse.maven")
         }
     }
+    maven("https://maven.nucleoid.xyz/") { name = "Nucleoid" }
 }
 
 dependencies {
@@ -26,6 +27,7 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
 
     modImplementation("curse.maven:cobblemon-687131:${property("cobblemon_curse_file_id")}")
+    modImplementation(include("eu.pb4:placeholder-api:2.0.0-pre.4+1.19.3")!!)
 }
 
 tasks {
