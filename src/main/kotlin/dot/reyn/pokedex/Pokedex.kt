@@ -25,6 +25,13 @@ class Pokedex : ModInitializer {
             this.handleGenericEvent(it.player, it.pokemon.species)
         }
 
+        CobblemonEvents.EVOLUTION_COMPLETE.subscribe {
+            val owner = it.pokemon.getOwnerPlayer()
+            if (owner != null) {
+                this.handleGenericEvent(owner, it.pokemon.species)
+            }
+        }
+
         // Create Pokédex data if it doesn't exist
         CobblemonEvents.PLAYER_JOIN.subscribe {
             val playerData = Cobblemon.playerData.get(it)
